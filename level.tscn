@@ -11,7 +11,6 @@ size = Vector3(30, 1, 30)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_r0s76"]
 render_priority = 127
-albedo_color = Color(0.615686, 1, 1, 1)
 
 [sub_resource type="BoxMesh" id="BoxMesh_tiyme"]
 material = SubResource("StandardMaterial3D_r0s76")
@@ -30,7 +29,7 @@ shape = SubResource("BoxShape3D_dpsrt")
 mesh = SubResource("BoxMesh_8hk53")
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.904879, 0.0987684, 0.414052, 0.225397, 0.936327, 0.269235, -0.361096, 0.336951, -0.869525, 6.05517, 4.56625, -5.33328)
+transform = Transform3D(-0.737851, -0.226261, 0.63591, -0.00444372, 0.943748, 0.330635, -0.674949, 0.241134, -0.697351, 6.05517, 4.56625, -5.33328)
 fov = 65.2527
 
 [node name="floor" type="StaticBody3D" parent="."]
