@@ -17,7 +17,7 @@ size = Vector3(30, 1, 30)
 transform = Transform3D(-0.764584, 0, -0.644524, 0, 1, 0, 0.644524, 0, -0.764584, 0.0533905, 0, 0)
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(0.721765, 0.346455, -0.599187, 0.0648147, 0.828068, 0.556869, 0.689097, -0.440765, 0.575215, -5.05316, 5.37517, 6.19232)
+transform = Transform3D(0.843246, 0.252953, -0.474289, 0.0648147, 0.828067, 0.556869, 0.533605, -0.500319, 0.68187, -7.60922, 5.37517, 9.22452)
 
 [node name="floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 1.78814e-07, 0, 1, 0, -1.78814e-07, 0, 1, 0, -1, 0)
@@ -49,5 +49,8 @@ transform = Transform3D(0.953882, -0.297653, -0.038876, 0.297653, 0.921111, 0.25
 mesh = SubResource("BoxMesh_xuhqb")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_t72va")]
-transform = Transform3D(1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, -0.566935, 0.480814, -0.375559)
+transform = Transform3D(1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, -1.97604, 0.480814, -0.255499)
 script = ExtResource("2_tcs7g")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 5.41624, 0)
