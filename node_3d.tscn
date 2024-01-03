@@ -1,4 +1,38 @@
-[gd_scene format=3 uid="uid://b0rumxjrsvqmw"]
+[gd_scene load_steps=5 format=3 uid="uid://b0rumxjrsvqmw"]
 
-[node name="Node3D" type="Node3D"]
-transform = Transform3D(-0.764584, 0, -0.644524, 0, 1, 0, 0.644524, 0, -0.764584, -131.531, 0, 0)
+[sub_resource type="BoxShape3D" id="BoxShape3D_y4r4r"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_tn307"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rha77"]
+size = Vector3(15, 1, 15)
+
+[sub_resource type="BoxMesh" id="BoxMesh_27wyr"]
+size = Vector3(30, 1, 30)
+
+[node name="Level" type="Node3D"]
+transform = Transform3D(-0.764584, 0, -0.644524, 0, 1, 0, 0.644524, 0, -0.764584, 0.0533905, 0, 0)
+
+[node name="box" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 1.19209e-07, 0, 1, 0, -1.19209e-07, 0, 1, 0, 4.89348, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="box"]
+shape = SubResource("BoxShape3D_y4r4r")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="box"]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_tn307")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="Floor" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Floor"]
+shape = SubResource("BoxShape3D_rha77")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Floor"]
+transform = Transform3D(1, 0, 5.96046e-08, 0, 1, 0, -5.96046e-08, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_27wyr")
+skeleton = NodePath("../CollisionShape3D")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.495697, 0.479346, 0.724232, -0.284946, -0.877496, 0.385756, 0.820421, -0.0151491, 0.57156, 8.32577, 6.08547, 2.65344)
