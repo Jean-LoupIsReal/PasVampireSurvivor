@@ -1,8 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704314292
-character_body_3d.gd::GDScript::-1::1704278783::0::1::::<>CharacterBody3D<>::
-character_body_3d.tscn::PackedScene::3544540799141663875::1704278961::0::1::::<><>::
-icon.svg::CompressedTexture2D::2593757363093737488::1704064268::1704064444::1::::<><>::
-node_3d.tscn::PackedScene::4177473188582708502::1704278999::0::1::::<><>::uid://bqracl43dvlb4::::res://character_body_3d.tscn<>res://character_body_3d.gd
-::res://asset/::1704277190
-::res://Test/::1704064565
+::res://::1704492616
+character_body_3d.gd::GDScript::-1::1704351251::0::1::::<>CharacterBody3D<>::
+character_body_3d.tscn::PackedScene::3544540799141663875::1704351429::0::1::::<><>::
+icon.svg::CompressedTexture2D::2593757363093737488::1704262647::1704262647::1::::<><>::
+node_3d.tscn::PackedScene::4177473188582708502::1704351489::0::1::::<><>::uid://bqracl43dvlb4::::res://character_body_3d.tscn<>res://character_body_3d.gd

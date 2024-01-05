@@ -52,5 +52,16 @@ mesh = SubResource("BoxMesh_xuhqb")
 transform = Transform3D(1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, -1.97604, 0.480814, -0.255499)
 script = ExtResource("2_tcs7g")
 
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 5.37664, 10.9803, -41.8208)
+light_color = Color(0.0117647, 1, 1, 1)
+light_energy = 5.876
+omni_range = 119.661
+
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 0, 5.41624, 0)
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 6.55312, 4.4795, -0.713315)
+light_color = Color(0.0117647, 1, 1, 1)
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -10.2493, 4.28764, -8.63991)
+light_color = Color(0.0117647, 1, 1, 1)
