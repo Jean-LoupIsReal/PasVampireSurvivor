@@ -1,6 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://oekrs2nrluxh"]
+[gd_scene load_steps=9 format=3 uid="uid://oekrs2nrluxh"]
 
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_xoy2y"]
+[ext_resource type="PackedScene" uid="uid://c53yguc8kmtvl" path="res://test-player.tscn" id="1_nqb48"]
+[ext_resource type="Script" path="res://test-player.gd" id="2_ugx0p"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_nvnoh"]
+bounce = 0.39
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_dpsrt"]
 
@@ -20,17 +24,13 @@ size = Vector3(30, 1, 30)
 
 [node name="box" type="RigidBody3D" parent="."]
 transform = Transform3D(0.856745, 0.515741, 0, -0.468645, 0.778509, 0.417486, 0.215315, -0.357679, 0.908683, 0, 4.25452, 0)
-physics_material_override = SubResource("PhysicsMaterial_xoy2y")
+physics_material_override = SubResource("PhysicsMaterial_nvnoh")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="box"]
 shape = SubResource("BoxShape3D_dpsrt")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="box"]
 mesh = SubResource("BoxMesh_8hk53")
-
-[node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(-0.737851, -0.226261, 0.63591, -0.00444372, 0.943748, 0.330635, -0.674949, 0.241134, -0.697351, 6.05517, 4.56625, -5.33328)
-fov = 65.2527
 
 [node name="floor" type="StaticBody3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0387025, -0.502603, -0.0890191)
@@ -48,3 +48,10 @@ transform = Transform3D(-0.868502, 0, 0.495686, 0, 1, 0, -0.495686, 0, -0.868502
 light_energy = 2.812
 light_indirect_energy = 1.285
 omni_range = 26.8548
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_nqb48")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.02642, 0)
+script = ExtResource("2_ugx0p")
+
+[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 0.919135, 0.393942, 0, -0.393942, 0.919135, 0, 4, 8)
