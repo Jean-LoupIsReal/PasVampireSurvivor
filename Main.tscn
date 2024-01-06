@@ -13,7 +13,7 @@ size = Vector3(30, 1, 30)
 transform = Transform3D(-0.764584, 0, -0.644524, 0, 1, 0, 0.644524, 0, -0.764584, 0.0533905, 0.0748601, 0)
 
 [node name="floor" type="StaticBody3D" parent="."]
-transform = Transform3D(1, 0, 1.78814e-07, 0, 1, 0, -1.78814e-07, 0, 1, 0, -1, 0)
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 0, -1, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
 shape = SubResource("BoxShape3D_jeubl")
@@ -27,7 +27,7 @@ transform = Transform3D(1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, -0.31689
 script = ExtResource("2_tcs7g")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(0.998869, 0.00792037, -0.0468768, 0.0126588, 0.906117, 0.422838, 0.0458249, -0.422953, 0.904992, -1.10301, 4.73303, 5.62842)
+transform = Transform3D(0.75471, 0.277263, -0.594591, 0, 0.906308, 0.422618, 0.656059, -0.318954, 0.683999, -4, 8, 4)
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -3.71343, 12.9409, -0.430678)
