@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-const SPEED: int = 7
+const SPEED = 7
 
 func _ready():
 	pass

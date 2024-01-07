@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=3 uid="uid://byi5o2bl64np8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s4p6t"]
+size = Vector3(0.1, 0.1, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_klrqt"]
+size = Vector3(0.1, 0.1, 1)
+
+[sub_resource type="Animation" id="Animation_hqnu7"]
+resource_name = "Shoot"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MeshInstance3D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.05), Vector3(0, 0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fx3d7"]
+_data = {
+"Shoot": SubResource("Animation_hqnu7")
+}
+
+[node name="Fusil" type="RigidBody3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_s4p6t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_klrqt")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fx3d7")
+}

@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0rumxjrsvqmw"]
+[gd_scene load_steps=6 format=3 uid="uid://b0rumxjrsvqmw"]
 
 [ext_resource type="PackedScene" uid="uid://bqracl43dvlb4" path="res://Player.tscn" id="1_t72va"]
-[ext_resource type="Script" path="res://Player.gd" id="2_tcs7g"]
+[ext_resource type="Script" path="res://GunScript2.gd" id="3_bnjvk"]
+[ext_resource type="PackedScene" uid="uid://dn20o353k0es3" path="res://Gun.tscn" id="4_d2xb2"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jeubl"]
 size = Vector3(30, 1, 30)
@@ -24,10 +25,16 @@ mesh = SubResource("BoxMesh_v7dab")
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_t72va")]
 transform = Transform3D(1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, -0.31689, 0.480814, -0.030531)
-script = ExtResource("2_tcs7g")
 
 [node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
 transform = Transform3D(0.75471, 0.277263, -0.594591, 0, 0.906308, 0.422618, 0.656059, -0.318954, 0.683999, -4, 8, 4)
+
+[node name="PositionDuGun" type="Marker3D" parent="CharacterBody3D"]
+transform = Transform3D(0.760633, 0, -0.649183, 0, 1, 0, 0.649183, 0, 0.760633, 0.532751, 0, 0.11747)
+
+[node name="GunScript2" type="Node" parent="CharacterBody3D"]
+script = ExtResource("3_bnjvk")
+"gunDépart" = ExtResource("4_d2xb2")
 
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -3.71343, 12.9409, -0.430678)

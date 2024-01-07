@@ -1,4 +1,10 @@
-res://node_3d.tscn
-res://character_body_3d.tscn
-res://Main.tscn
 res://Player.tscn
+res://Player.gd
+res://Main.tscn
+res://Fusil.tscn
+res://Gun stuff.gd
+res://Gun.gd
+res://GunScript.gd
+res://Gun.tscn
+res://GunScript2.gd
+res://bullet.tscn
