@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+var hp = 100
+
 const SPEED: int = 7
 
 func _ready():
@@ -25,3 +27,19 @@ func _physics_process(delta):
 	else:
 		velocity.z = lerpf(velocity.z,0,0.1)
 	move_and_slide()
+
+func hit(damage):
+	hp = hp - damage
+	hitAnimation()
+	isDead()
+	
+func isDead():
+	if(hp <= 0):
+		gameOver()
+
+# À ajouter
+func hitAnimation():
+	pass
+	
+func gameOver():
+	pass
