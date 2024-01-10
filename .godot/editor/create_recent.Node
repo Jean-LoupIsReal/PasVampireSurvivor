@@ -1,9 +1,11 @@
+NavigationRegion3D
+NavigationAgent3D
+CollisionShape3D
+CharacterBody3D
 Camera3D
 XROrigin3D
 XRCamera3D
 MeshInstance3D
-CollisionShape3D
 RigidBody3D
 OmniLight3D
-CharacterBody3D
 StaticBody3D

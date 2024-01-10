@@ -1,7 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b0rumxjrsvqmw"]
+[gd_scene load_steps=8 format=3 uid="uid://b0rumxjrsvqmw"]
 
 [ext_resource type="PackedScene" uid="uid://bqracl43dvlb4" path="res://Player.tscn" id="1_t72va"]
 [ext_resource type="Script" path="res://Player.gd" id="2_tcs7g"]
+[ext_resource type="PackedScene" uid="uid://bg0djkn7lqjjv" path="res://mobs/zombie/zombie_girl.tscn" id="3_gik3q"]
+[ext_resource type="Script" path="res://mobs/zombie/zombie_girl.gd" id="4_w86fj"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_qgwh0"]
+vertices = PackedVector3Array(-25.3375, 0.427707, 6.89403, -2.83752, 0.427707, 25.894, 15.9125, 0.427707, 3.64403, -6.58752, 0.427707, -15.356)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_jeubl"]
 size = Vector3(30, 1, 30)
@@ -12,34 +18,39 @@ size = Vector3(30, 1, 30)
 [node name="Level" type="Node3D"]
 transform = Transform3D(-0.764584, 0, -0.644524, 0, 1, 0, 0.644524, 0, -0.764584, 0.0533905, 0.0748601, 0)
 
-[node name="floor" type="StaticBody3D" parent="."]
-transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, 0, -1, 0)
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
-shape = SubResource("BoxShape3D_jeubl")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
-transform = Transform3D(1, 0, 1.78814e-07, 0, 1, 0, -1.78814e-07, 0, 1, 0, 0, 0)
-mesh = SubResource("BoxMesh_v7dab")
-
-[node name="CharacterBody3D" parent="." instance=ExtResource("1_t72va")]
-transform = Transform3D(1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, -0.31689, 0.480814, -0.030531)
-script = ExtResource("2_tcs7g")
-
-[node name="Camera3D" type="Camera3D" parent="CharacterBody3D"]
-transform = Transform3D(0.75471, 0.277263, -0.594591, 0, 0.906308, 0.422618, 0.656059, -0.318954, 0.683999, -4, 8, 4)
-
 [node name="OmniLight3D3" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -3.71343, 12.9409, -0.430678)
-light_color = Color(0.0117647, 1, 1, 1)
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -2.53002, 12.9409, 0.741718)
 light_energy = 5.876
 light_volumetric_fog_energy = 1.659
 omni_range = 119.661
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, 6.55312, 4.4795, -0.713315)
-light_color = Color(0.0117647, 1, 1, 1)
 
 [node name="OmniLight3D2" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -10.2493, 4.28764, -8.63991)
-light_color = Color(0.0117647, 1, 1, 1)
+transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -6.83306, 5.27157, -5.95808)
+
+[node name="Player" parent="." instance=ExtResource("1_t72va")]
+transform = Transform3D(1, 0, 2.08616e-07, 0, 1, 0, -2.08616e-07, 0, 1, 0, 0.516926, 0)
+script = ExtResource("2_tcs7g")
+
+[node name="Camera3D" type="Camera3D" parent="Player"]
+transform = Transform3D(0.75471, 0.277262, -0.594591, 0, 0.906308, 0.422618, 0.656059, -0.318954, 0.684, -4.31689, 8.48081, 3.96947)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, 4.70504, -0.0277069, -5.27651)
+navigation_mesh = SubResource("NavigationMesh_qgwh0")
+
+[node name="zombieGirl" parent="NavigationRegion3D" instance=ExtResource("3_gik3q")]
+script = ExtResource("4_w86fj")
+player_path = NodePath("../../Player")
+
+[node name="floor" type="StaticBody3D" parent="NavigationRegion3D"]
+transform = Transform3D(0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, 0.642788, -4.70504, -0.572293, 5.27651)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floor"]
+shape = SubResource("BoxShape3D_jeubl")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floor"]
+transform = Transform3D(1, 0, 1.79047e-07, 0, 1, 0, -1.79047e-07, 0, 1, 0, 0, 0)
+mesh = SubResource("BoxMesh_v7dab")
