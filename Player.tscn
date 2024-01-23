@@ -1,16 +1,16 @@
 [gd_scene load_steps=3 format=3 uid="uid://bqracl43dvlb4"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_gc0so"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vr25u"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_cu3fg"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bcekv"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_gc0so")
+shape = SubResource("CapsuleShape3D_vr25u")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_cu3fg")
+mesh = SubResource("CapsuleMesh_bcekv")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.75471, 0.277262, -0.594591, 0, 0.906308, 0.422618, 0.656059, -0.318954, 0.684, -4.31689, 8.48081, 3.96947)

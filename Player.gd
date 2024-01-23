@@ -1,6 +1,10 @@
 extends CharacterBody3D
 
+var grav = 9.8
+var jump = 5
+var move = Vector3()
 var hp = 100
+var hit_vel = 5.0
 const SPEED: int = 7
 
 @onready var hit_rect = $UI/HitRect
@@ -28,12 +32,16 @@ func _physics_process(delta):
 		velocity.z = -SPEED
 	else:
 		velocity.z = lerpf(velocity.z,0,0.1)
+		
+	if not is_on_floor():
+		velocity.y -= grav * delta
 	move_and_slide()
 
-func hit(damage):
-	hp = hp - damage
-	isDead()
+func hit(dir):
+	velocity += dir * hit_vel
+	hp = hp - 5
 	hitAnimation()
+	isDead()
 	
 func isDead():
 	if(hp <= 0):
