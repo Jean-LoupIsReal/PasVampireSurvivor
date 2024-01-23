@@ -32,8 +32,8 @@ func _physics_process(delta):
 
 func hit(damage):
 	hp = hp - damage
-	hitAnimation()
 	isDead()
+	hitAnimation()
 	
 func isDead():
 	if(hp <= 0):
