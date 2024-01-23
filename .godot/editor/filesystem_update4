@@ -1,4 +1,4 @@
-res://mobs/zombie/zombie_girl.tscn
-res://mobs/zombie/zombie_girl.gd
 res://Player.tscn
+res://mobs/zombie/zombie_girl.gd
 res://Main.tscn
+res://mobs/zombie/zombie_girl.tscn
