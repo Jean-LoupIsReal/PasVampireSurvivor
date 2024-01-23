@@ -1,4 +1,5 @@
-res://Main.tscn
 res://Player.tscn
-res://Gun.tscn
-res://bullet.tscn
+res://mobs/zombie/zombie_girl.gd
+res://Main.tscn
+res://mobs/zombie/zombie_girl.tscn
+res://Player.gd

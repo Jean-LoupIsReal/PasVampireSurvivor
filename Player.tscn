@@ -2,15 +2,33 @@
 
 [ext_resource type="Script" path="res://Player.gd" id="1_eykp2"]
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_gc0so"]
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vr25u"]
 
-[sub_resource type="SphereMesh" id="SphereMesh_cu3fg"]
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_bcekv"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 script = ExtResource("1_eykp2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-shape = SubResource("BoxShape3D_gc0so")
+shape = SubResource("CapsuleShape3D_vr25u")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = SubResource("SphereMesh_cu3fg")
+mesh = SubResource("CapsuleMesh_bcekv")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.75471, 0.277262, -0.594591, 0, 0.906308, 0.422618, 0.656059, -0.318954, 0.684, -4.31689, 8.48081, 3.96947)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1299.0
+offset_bottom = 722.0
+
+[node name="HitRect" type="ColorRect" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = -153.0
+offset_top = -72.0
+offset_right = 1729.0
+offset_bottom = 1036.0
+color = Color(0.878431, 0, 0, 0.345098)

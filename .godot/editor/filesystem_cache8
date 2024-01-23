@@ -1,15 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1705971014
-bullet.tscn::PackedScene::4875954299047450460::1705970968::0::1::::<><>::
-Fusil.tscn::PackedScene::4089315884153648715::1705970968::0::1::::<><>::
-Gun stuff.gd::GDScript::-1::1705970968::0::1::::<>Node<>::
-Gun.gd::GDScript::-1::1705970968::0::1::::<>Node<>::
-Gun.tscn::PackedScene::8128999661951647864::1705970968::0::1::::<><>::res://Gun.gd<>uid://cbp7iwxmclp8g::::res://bullet.tscn
-GunScript2.gd::GDScript::-1::1705970968::0::1::::<>Node<>::
-GunScript.gd::GDScript::-1::1705970968::0::1::::<>RefCounted<>::
+::res://::1705972048
 icon.svg::CompressedTexture2D::2593757363093737488::1704063916::1705971014::1::::<><>::
-Main.tscn::PackedScene::4177473188582708502::1705970989::0::1::::<><>::uid://bqracl43dvlb4::::res://Player.tscn<>res://GunScript2.gd<>uid://dn20o353k0es3::::res://Gun.tscn
+Main.tscn::PackedScene::4177473188582708502::1705972031::0::1::::<><>::uid://bqracl43dvlb4::::res://Player.tscn<>res://Player.gd<>uid://bg0djkn7lqjjv::::res://mobs/zombie/zombie_girl.tscn<>res://mobs/zombie/zombie_girl.gd
 Nouveau Document texte.txt::TextFile::-1::1704499798::0::1::::<><>::
 openxr_action_map.tres::OpenXRActionMap::8530121139817289067::1704499798::0::1::::<><>::
-Player.gd::GDScript::-1::1705970968::0::1::::<>CharacterBody3D<>::
-Player.tscn::PackedScene::3544540799141663875::1705970968::0::1::::<><>::res://Player.gd
+Player.gd::GDScript::-1::1705972031::0::1::::<>CharacterBody3D<>::
+Player.tscn::PackedScene::3544540799141663875::1705972031::0::1::::<><>::
+::res://mobs/::1705972031
+::res://mobs/zombie/::1705972031
+zombieGirl.glb::PackedScene::4177157565738394038::1705972031::1705972031::1::::<><>::
+zombieGirl_zombie_body_diffuse.png::CompressedTexture2D::5594678522613641512::1705972031::1705972031::1::::<><>::
+zombieGirl_zombie_diffuse.png::CompressedTexture2D::4387134782428048205::1705972031::1705972031::1::::<><>::
+zombieGirl_zombie_normal.png::CompressedTexture2D::405153003270565002::1705972031::1705972031::1::::<><>::
+zombieGirl_zombie_specular.png::CompressedTexture2D::7439633050095482884::1705972031::1705972031::1::::<><>::
+zombie_girl.gd::GDScript::-1::1705972031::0::1::::<>CharacterBody3D<>::
+zombie_girl.tscn::PackedScene::2859361959281464923::1705972031::0::1::::<><>::uid://clydsj1vkmn33::::res://mobs/zombie/zombieGirl_zombie_body_diffuse.png<>uid://f1i2tirrb7vi::::res://mobs/zombie/zombieGirl_zombie_normal.png<>uid://b3rfp7btrp0fx::::res://mobs/zombie/zombieGirl_zombie_diffuse.png

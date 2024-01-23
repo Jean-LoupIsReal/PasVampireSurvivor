@@ -1,8 +1,12 @@
+
 Marker3D
 MeshInstance3D
 AnimationPlayer
 Node
 Node3D
+AnimationTree
+NavigationRegion3D
+NavigationAgent3D
 CollisionShape3D
 RigidBody3D
 Camera3D
