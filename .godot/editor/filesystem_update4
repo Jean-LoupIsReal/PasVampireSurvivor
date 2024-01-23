@@ -1,2 +1,7 @@
-res://node_3d.tscn
-res://character_body_3d.tscn
+res://Main.tscn
+res://Player.tscn
+res://Gun.tscn
+res://bullet.tscn
+res://Player.gd
+res://Gun.gd
+res://bullet.gd

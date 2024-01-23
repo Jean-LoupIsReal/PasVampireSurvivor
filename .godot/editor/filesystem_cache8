@@ -1,7 +1,25 @@
 ea4bc82a6ad023ab7ee23ee620429895
+<<<<<<< Updated upstream
 ::res://::1704498008
 icon.svg::CompressedTexture2D::2593757363093737488::1704262647::1704262647::1::::<><>::
 node_3d.tscn::PackedScene::4177473188582708502::1704498007::0::1::::<><>::uid://bqracl43dvlb4::::res://Player.tscn<>res://Player.gd
 openxr_action_map.tres::OpenXRActionMap::8530121139817289067::1704497505::0::1::::<><>::
 Player.gd::GDScript::-1::1704497003::0::1::::<>CharacterBody3D<>::
 Player.tscn::PackedScene::3544540799141663875::1704497771::0::1::::<><>::
+=======
+::res://::1705964740
+bullet.tscn::PackedScene::4875954299047450460::1704659757::0::1::::<><>::
+Fusil.tscn::PackedScene::4089315884153648715::1704652977::0::1::::<><>::
+Gun stuff.gd::GDScript::-1::1704655119::0::1::::<>Node<>::
+Gun.gd::GDScript::-1::1704659407::0::1::::<>Node<>::
+Gun.tscn::PackedScene::8128999661951647864::1704659757::0::1::::<><>::res://Gun.gd<>uid://cbp7iwxmclp8g::::res://bullet.tscn
+GunScript2.gd::GDScript::-1::1704658253::0::1::::<>Node<>::
+GunScript.gd::GDScript::-1::1704655713::0::1::::<>RefCounted<>::
+icon.svg::CompressedTexture2D::2593757363093737488::1704262647::1704650050::1::::<><>::
+Main.tscn::PackedScene::4177473188582708502::1704659870::0::1::::<><>::uid://bqracl43dvlb4::::res://Player.tscn<>res://GunScript2.gd<>uid://dn20o353k0es3::::res://Gun.tscn
+Nouveau Document texte.txt::TextFile::-1::1704498083::0::1::::<><>::
+openxr_action_map.tres::OpenXRActionMap::8530121139817289067::1704498095::0::1::::<><>::
+Player.gd::GDScript::-1::1704658846::0::1::::<>CharacterBody3D<>::
+Player.tscn::PackedScene::3544540799141663875::1704659757::0::1::::<><>::res://Player.gd
+::res://Gun texture/::1704651024
+>>>>>>> Stashed changes

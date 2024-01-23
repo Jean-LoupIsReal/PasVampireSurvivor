@@ -1,0 +1,65 @@
+[gd_scene load_steps=5 format=3 uid="uid://dn20o353k0es3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0pojk"]
+metallic = 0.34
+
+[sub_resource type="BoxMesh" id="BoxMesh_tym81"]
+material = SubResource("StandardMaterial3D_0pojk")
+size = Vector3(0.1, 0.1, 1)
+
+[sub_resource type="Animation" id="Animation_d72ev"]
+resource_name = "Shoot"
+length = 0.1
+step = 0.01
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.01, 0.1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -0.0468697, -1.00613), Vector3(0, -0.047, -0.8), Vector3(0, -0.0468697, -1.00613)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_nsc6q"]
+_data = {
+"Shoot": SubResource("Animation_d72ev")
+}
+
+[node name="Gun" type="Node3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.0468697, -1.00613)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.503067)
+mesh = SubResource("BoxMesh_tym81")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.92307, 0, 0, 0, 0.160478, -0.209007, 0, -1.11488, -0.0300849, 0, -0.0678926, 0.049692)
+mesh = SubResource("BoxMesh_tym81")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_nsc6q")
+}
+
+[node name="Muzzle" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, -3.8743e-07, 0, 1, 0, 3.8743e-07, 0, 1, 0.707018, -0.480814, -0.0676775)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[node name="TimeRemaining" type="Label" parent="."]
+offset_left = 629.0
+offset_top = 254.0
+offset_right = 916.0
+offset_bottom = 277.0
+text = "allo"
+
+[node name="RayCast3D" type="RayCast3D" parent="."]
+target_position = Vector3(0, -1, -1)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
