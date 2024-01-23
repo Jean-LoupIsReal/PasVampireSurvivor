@@ -1,7 +1,6 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0rumxjrsvqmw"]
+[gd_scene load_steps=6 format=3 uid="uid://b0rumxjrsvqmw"]
 
 [ext_resource type="PackedScene" uid="uid://bqracl43dvlb4" path="res://Player.tscn" id="1_t72va"]
-[ext_resource type="Script" path="res://Player.gd" id="2_tcs7g"]
 [ext_resource type="PackedScene" uid="uid://bg0djkn7lqjjv" path="res://mobs/zombie/zombie_girl.tscn" id="3_gik3q"]
 
 [sub_resource type="NavigationMesh" id="NavigationMesh_qgwh0"]
@@ -31,7 +30,6 @@ transform = Transform3D(1, 0, 2.98023e-08, 0, 1, 0, -2.98023e-08, 0, 1, -6.83306
 
 [node name="Player" parent="." instance=ExtResource("1_t72va")]
 transform = Transform3D(1, 0, 2.08616e-07, 0, 1, 0, -2.08616e-07, 0, 1, 0, 0.516926, 0)
-script = ExtResource("2_tcs7g")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
 transform = Transform3D(1, 0, 2.68221e-07, 0, 1, 0, -2.68221e-07, 0, 1, 4.70504, -0.0277069, -5.27651)

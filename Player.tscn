@@ -1,13 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://bqracl43dvlb4"]
-
-[ext_resource type="Script" path="res://Player.gd" id="1_eykp2"]
+[gd_scene load_steps=3 format=3 uid="uid://bqracl43dvlb4"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_vr25u"]
 
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bcekv"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
-script = ExtResource("1_eykp2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 shape = SubResource("CapsuleShape3D_vr25u")
@@ -17,6 +14,7 @@ mesh = SubResource("CapsuleMesh_bcekv")
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(0.75471, 0.277262, -0.594591, 0, 0.906308, 0.422618, 0.656059, -0.318954, 0.684, -4.31689, 8.48081, 3.96947)
+current = true
 
 [node name="UI" type="Control" parent="."]
 layout_mode = 3
