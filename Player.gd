@@ -1,8 +1,10 @@
 extends CharacterBody3D
 
 var hp = 100
-
 const SPEED: int = 7
+
+@onready var hit_rect = $UI/HitRect
+
 
 func _ready():
 	pass
@@ -39,7 +41,9 @@ func isDead():
 
 # À ajouter
 func hitAnimation():
-	pass
+	hit_rect.visible = true
+	await get_tree().create_timer(0.2).timeout
+	hit_rect.visible = false
 	
 func gameOver():
 	pass

@@ -11,3 +11,21 @@ shape = SubResource("BoxShape3D_gc0so")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_cu3fg")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.75471, 0.277262, -0.594591, 0, 0.906308, 0.422618, 0.656059, -0.318954, 0.684, -4.31689, 8.48081, 3.96947)
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1299.0
+offset_bottom = 722.0
+
+[node name="HitRect" type="ColorRect" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = -153.0
+offset_top = -72.0
+offset_right = 1729.0
+offset_bottom = 1036.0
+color = Color(0.878431, 0, 0, 0.345098)

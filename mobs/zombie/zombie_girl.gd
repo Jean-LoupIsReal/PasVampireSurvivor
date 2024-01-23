@@ -3,7 +3,7 @@ extends CharacterBody3D
 var player = null
 var stateMachine
 const SPEED = 4.0
-const attackRange = 1.5
+const attackRange = 1.2
 var dm = 5
 
 @export var player_path : NodePath
