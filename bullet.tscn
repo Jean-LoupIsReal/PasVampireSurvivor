@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://bger60ik3et2t"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_f25ct"]
+radius = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_f36nw"]
+radius = 0.1
+height = 0.2
+
+[node name="Bullet" type="RigidBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("SphereShape3D_f25ct")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_f36nw")

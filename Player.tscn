@@ -1,8 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqracl43dvlb4"]
+[gd_scene load_steps=4 format=3 uid="uid://bqracl43dvlb4"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_gc0so"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_cu3fg"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_rrdh6"]
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 
@@ -11,3 +13,13 @@ shape = SubResource("BoxShape3D_gc0so")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("SphereMesh_cu3fg")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.953696, 0.300772, 0, -0.300772, 0.953696, 0, 1.01722, 2.01477)
+
+[node name="BulletSpawn" type="Node3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.222781, 0.044633, -3.24158)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D/BulletSpawn"]
+transform = Transform3D(0.457939, 0, 0, 0, 0.185514, 7.45058e-08, 0, 3.72529e-09, 0.743131, -0.772011, -0.0308706, -0.00973582)
+mesh = SubResource("CylinderMesh_rrdh6")
