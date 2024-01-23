@@ -4,11 +4,13 @@ var player = null
 var stateMachine
 const SPEED = 4.0
 const attackRange = 1.5
+var dm = 5
 
 @export var player_path : NodePath
 
 @onready var nav_agent = $NavigationAgent3D
 @onready var anim_tree = $AnimationTree
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -43,3 +45,6 @@ func _process(delta):
 	
 func _target_in_range():
 	return global_position.distance_to(player.global_position) < attackRange
+	
+func hit_finished():
+	player.hit(dm)
