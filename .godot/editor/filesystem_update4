@@ -1,10 +1,4 @@
-res://Player.tscn
-res://Player.gd
 res://Main.tscn
-res://Fusil.tscn
-res://Gun stuff.gd
-res://Gun.gd
-res://GunScript.gd
+res://Player.tscn
 res://Gun.tscn
-res://GunScript2.gd
 res://bullet.tscn

@@ -1,10 +1,15 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1704652136
-Fusil.tscn::PackedScene::4089315884153648715::1704652113::0::1::::<><>::
-icon.svg::CompressedTexture2D::2593757363093737488::1704262647::1704650050::1::::<><>::
-Main.tscn::PackedScene::4177473188582708502::1704650056::0::1::::<><>::uid://bqracl43dvlb4::::res://Player.tscn<>res://Player.gd
-Nouveau Document texte.txt::TextFile::-1::1704498083::0::1::::<><>::
-openxr_action_map.tres::OpenXRActionMap::8530121139817289067::1704498095::0::1::::<><>::
-Player.gd::GDScript::-1::1704498095::0::1::::<>CharacterBody3D<>::
-Player.tscn::PackedScene::3544540799141663875::1704650056::0::1::::<><>::
-::res://Gun texture/::1704651024
+::res://::1705971014
+bullet.tscn::PackedScene::4875954299047450460::1705970968::0::1::::<><>::
+Fusil.tscn::PackedScene::4089315884153648715::1705970968::0::1::::<><>::
+Gun stuff.gd::GDScript::-1::1705970968::0::1::::<>Node<>::
+Gun.gd::GDScript::-1::1705970968::0::1::::<>Node<>::
+Gun.tscn::PackedScene::8128999661951647864::1705970968::0::1::::<><>::res://Gun.gd<>uid://cbp7iwxmclp8g::::res://bullet.tscn
+GunScript2.gd::GDScript::-1::1705970968::0::1::::<>Node<>::
+GunScript.gd::GDScript::-1::1705970968::0::1::::<>RefCounted<>::
+icon.svg::CompressedTexture2D::2593757363093737488::1704063916::1705971014::1::::<><>::
+Main.tscn::PackedScene::4177473188582708502::1705970989::0::1::::<><>::uid://bqracl43dvlb4::::res://Player.tscn<>res://GunScript2.gd<>uid://dn20o353k0es3::::res://Gun.tscn
+Nouveau Document texte.txt::TextFile::-1::1704499798::0::1::::<><>::
+openxr_action_map.tres::OpenXRActionMap::8530121139817289067::1704499798::0::1::::<><>::
+Player.gd::GDScript::-1::1705970968::0::1::::<>CharacterBody3D<>::
+Player.tscn::PackedScene::3544540799141663875::1705970968::0::1::::<><>::res://Player.gd
