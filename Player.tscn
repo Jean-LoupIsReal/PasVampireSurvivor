@@ -21,5 +21,5 @@ transform = Transform3D(1, 0, 0, 0, 0.953696, 0.300772, 0, -0.300772, 0.953696, 
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.222781, 0.044633, -3.24158)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Camera3D/BulletSpawn"]
-transform = Transform3D(0.457939, 0, 0, 0, 0.185514, 7.45058e-08, 0, 3.72529e-09, 0.743131, -0.772011, -0.0308706, -0.00973582)
+transform = Transform3D(0.457939, 0, 0, 0, 0.185514, 1.63913e-07, 0, 3.72529e-09, 0.743131, 0.347001, -0.166565, 0.420528)
 mesh = SubResource("CylinderMesh_rrdh6")

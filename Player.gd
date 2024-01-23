@@ -4,6 +4,10 @@ var hp = 100
 
 const SPEED: int = 7
 
+@export var bullet_speed = 25
+@onready var bullet_scene = preload("res://bullet.tscn")
+@onready var bullet_spawn_Point = $Camera3D/BulletSpawn
+
 func _ready():
 	pass
 
@@ -27,6 +31,9 @@ func _physics_process(delta):
 	else:
 		velocity.z = lerpf(velocity.z,0,0.1)
 	move_and_slide()
+	
+	if Input.is_action_pressed("shoot"):
+		shoot()
 
 func hit(damage):
 	hp = hp - damage
@@ -43,3 +50,12 @@ func hitAnimation():
 	
 func gameOver():
 	pass
+
+func shoot():
+	var projectile = bullet_scene.instantiate()
+	
+	add_sibling(projectile)# add the projectile to the scene
+	
+	#handle movement and direction
+	projectile.transform = bullet_spawn_Point.global_transform
+	projectile.linear_velocity = bullet_spawn_Point.global_transform.basis.z * -1 * bullet_speed

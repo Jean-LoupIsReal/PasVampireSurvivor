@@ -2,3 +2,5 @@ res://Player.tscn
 res://gun.tscn
 res://bullet.tscn
 res://Main.tscn
+res://mobs/zombie/zombie_girl.tscn
+res://Player.gd
